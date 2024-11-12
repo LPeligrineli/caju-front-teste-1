@@ -13,3 +13,7 @@ export const Actions = styled.div`
   align-items: center;
   gap: 16px;
 `;
+
+export const SearchForm = styled.form`
+  width: 100%;
+`;
