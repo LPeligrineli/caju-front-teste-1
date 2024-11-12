@@ -1,7 +1,7 @@
-import React, { InputHTMLAttributes } from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Input = styled.input`
+  box-sizing: border-box;
   padding: 0 8px;
   vertical-align: middle;
   border-radius: 2px;
@@ -20,19 +20,15 @@ export const Input = styled.input`
     box-shadow: inset 0 0 0 1px #007c89;
   }
 `;
-type Props = {
-  label?: string;
-  error?: string;
-} & InputHTMLAttributes<any>;
 
-const TextField = (props: Props) => {
-  return (
-    <div>
-      <label htmlFor={props.id}>{props.label}</label>
-      <Input {...props} />
-      <span style={{fontSize: 12, color: 'red'}}>{props.error}</span>
-    </div>
-  );
-};
+export const InputContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+`
 
-export default TextField;
+export const Error = styled.span`
+    font-size: 12px;
+    color: red;
+`

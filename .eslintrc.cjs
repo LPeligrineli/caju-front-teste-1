@@ -13,6 +13,10 @@ module.exports = {
       version: 'detect',
     },
     'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+        project: './tsconfig.json',
+      },
       node: {
         paths: ['src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -27,6 +31,6 @@ module.exports = {
     "react/display-name": "off",
     "@typescript-eslint/ban-types": "off",
     "import/named": "off",
-    "react-hooks/exhaustive-deps": "warn"
+   
   },
 };
